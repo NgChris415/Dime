@@ -1,0 +1,16 @@
+Name: Christopher Ng
+Stack: Python
+Github repo: https://github.com/NgChris415/Projects/tree/main/solo_project
+Project Name: Dime (may change)
+Project Description: A project to create a budgetting app/website to 
+                    help people easily keep track of their finances from month to month
+MVP:
+    1. login and registration
+    2. dashboard (lists date created for budget, view/create/delete/edit)
+    3. bugetting page (where you can create your budget sheet for the month)
+    4. view budget sheet page
+    5. edit budget sheet page
+    6. database to store information
+
+Bonus:
+    1. External API, would be cool to automatically connect to a credit card and load in the purchases
