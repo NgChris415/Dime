@@ -21,12 +21,11 @@
                 <p>Savings Goal: {{sheet.savings_goal}}</p>
             </div>
             <div>
-                <p>Total Spent:</p>
-                {% set total_remaining = (sheet.monthly_income | int) - (sheet.savings_goal | int) %}
+                <p>Total Spent: {{total_amount_spent}}</p>
+                {% set total_remaining = (sheet.monthly_income | int) - total_amount_spent %}
                 <p>Total remaining: {{total_remaining}}</p>
             </div>
             <div>
-                {% for expense in expenses%}
                 <div>
                     <thead>
                         <table class="expense_table">
@@ -34,19 +33,20 @@
                             <th>Category</th>
                             <th>Amount Spent</th>
                             <th>Actions</th>
-                    </thead>
-                    <tbody>
+                        </thead>
+                    {% for expense in expenses%}
+                        <tbody>
                         <td>{{expense.location}}</td>
                         <td>{{expense.category}}</td>
                         <td>{{expense.amount_spent}}</td>
                         <td>
-                            <a href="/sheet/edit/{{sheet.id}}">Edit</a>
+                            <a href="/sheet/view/{{sheet.id}}/expense/form/edit/{{expense.id}}">Edit</a>
                             <a href="/sheet/delete/{{sheet.id}}">Delete</a>
                         </td>
                     </tbody>
+                    {% endfor %}
                     </table>
                 </div>
-                {% endfor %}
             </div>
         </div>
         <a href="/sheet/view/{{sheet.id}}/expense/form"><button>Add Expense</button></a>

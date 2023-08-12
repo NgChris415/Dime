@@ -6,7 +6,7 @@ db = 'Budget'
 class Expenses:
     def __init__(self, data):
         self.id = data['id']
-        self.sheet_id = data['sheets_id']
+        # self.sheet_id = data['sheets_id']
         self.location = data['location']
         self.category = data['category']
         self.amount_spent = data['amount_spent']
@@ -35,6 +35,12 @@ class Expenses:
     def update_sheet(cls,form_data):
         query = "UPDATE expenses SET location = %(location)s, category = %(category)s, amount_spent = %(amount_spent)s WHERE id = %(id)s;"
         return connectToMySQL(db).query_db(query,form_data)
+
+    @classmethod
+    def get_all_expenses_by_id(cls, data):
+        query = 'SELECT * FROM expenses WHERE expenses.sheets_id = %(id)s;'
+        results = connectToMySQL(db).query_db(query, data)
+        return results
 
     @staticmethod
     def validate_expense(form_data):

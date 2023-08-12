@@ -29,3 +29,12 @@ def submit_expense(id):
     Expenses.add_expense(data)
     print('################################################')
     return redirect('/dashboard')
+
+@app.route('/sheet/view/<int:id>/expense/form/edit/<int:expense_id>')
+def expense_form_edit(id, expense_id):
+    if 'user_id' not in session:
+        return redirect('/logout')
+    data ={
+        'id': session['user_id']
+    }
+    return render_template ('edit_expense.html', user = Users.get_user(data), sheet=Sheets.get_sheet_by_id({'id':id}), expense=Expenses.get_expense({'id':expense_id}))

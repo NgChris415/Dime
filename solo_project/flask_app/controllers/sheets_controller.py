@@ -52,12 +52,22 @@ def delete_recipe(id):
     Sheets.delete_sheet({'id':id})
     return redirect('/dashboard')
 
-@app.route('/sheet/view/<int:id>')
-def view_sheet_page(id):
+@app.route('/sheet/view/<int:sheet_id>')
+def view_sheet_page(sheet_id):
     if 'user_id' not in session:
         return redirect('/logout')
     data ={
         'id': session['user_id']
     }
-    return render_template('display_sheet.html', user = Users.get_user(data), sheet=Sheets.get_sheet_by_id({'id':id}))
+    expenses=Expenses.get_all_expenses_by_id({'id':sheet_id})
+    total_amount_spent = 0
+    for expense in expenses:
+        # import pdb; pdb.set_trace()
+        total_amount_spent = total_amount_spent + expense['amount_spent']
+    return render_template('display_sheet.html', 
+                        user = Users.get_user(data), 
+                        sheet=Sheets.get_sheet_by_id({'id':sheet_id}), 
+                        expenses=Expenses.get_all_expenses_by_id({'id':sheet_id}),
+                        total_amount_spent = total_amount_spent
+    )
 
