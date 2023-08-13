@@ -52,13 +52,13 @@ class Sheets:
         if form_data['monthly_income'] == 0:
             flash("Monthly Income must be greater than 0")
             is_valid = False
-        if form_data['savings_goal'] == 0:
+        if int(form_data['savings_goal']) <= 0:
             flash("Savings Goal must be greater than 0")
             is_valid = False
         if len(form_data['month']) < 2:
             flash("Month must be greater than 2 characters")
             is_valid = False
-        if form_data['year'] == 0:
+        if int(form_data['year']) <= 0:
             flash("Year must be greater than 0")
             is_valid = False
         return is_valid

@@ -16,12 +16,17 @@
             {% endfor %}
         {% endif %}
     {% endwith %}
-        <div class="sheet_header">
-            <h2>Add an Expense</h2>
-            <a href="/dashboard"><button>Dashboard</button></a>
-            <a href="/logout"><button>Logout</button></a>
+        <div class="expense_header">
+            <div class="title_left">
+                <h2>Add an Expense</h2>
+            </div>
+            <div class="buttons_right">
+                <a href="/dashboard"><button>Dashboard</button></a>
+                <a href="/logout"><button>Logout</button></a>
+            </div>
         </div>
-            <form action="/sheet/expense/edit" class="sheet_form" method="post">
+        <div class="expense_form">
+            <form action="/sheet/view/{{sheet.id}}/expense/form/edit/{{expense.id}}/submit" class="sheet_form" method="post">
                 <div class="form_options">
                     <label for="location">Location:</label>
                     <textarea name="location" id="location">{{expense.location}}</textarea>
@@ -38,7 +43,7 @@
                     <label for="amount_spent">Amount Spent:</label>
                     <input type="number'" name="amount_spent" id="amount_spent" value="{{expense.amount_spent}}">
                 </div>
-                <input type="submit" value="Add Expense">
+                <input type="submit" value="Update Expense">
             </form>
         </div>
 </body>

@@ -41,7 +41,7 @@
                         <td>{{expense.amount_spent}}</td>
                         <td>
                             <a href="/sheet/view/{{sheet.id}}/expense/form/edit/{{expense.id}}">Edit</a>
-                            <a href="/sheet/delete/{{sheet.id}}">Delete</a>
+                            <a href="/sheet/view/{{sheet.id}}/expense/form/delete/{{expense.id}}">Delete</a>
                         </td>
                     </tbody>
                     {% endfor %}
@@ -49,7 +49,7 @@
                 </div>
             </div>
         </div>
-        <a href="/sheet/view/{{sheet.id}}/expense/form"><button>Add Expense</button></a>
+        <a href="/sheet/view/{{sheet.id}}/expense/form"><button class="add_button">Add Expense</button></a>
     </div>
 </body>
 </html>

@@ -27,12 +27,12 @@ class Expenses:
         return results
 
     @classmethod
-    def delete_sheet(cls,data):
+    def delete_expense(cls,data):
         query= 'DELETE FROM expenses WHERE id = %(id)s;'
         return connectToMySQL(db).query_db(query,data)
 
     @classmethod
-    def update_sheet(cls,form_data):
+    def update_expense(cls,form_data):
         query = "UPDATE expenses SET location = %(location)s, category = %(category)s, amount_spent = %(amount_spent)s WHERE id = %(id)s;"
         return connectToMySQL(db).query_db(query,form_data)
 
@@ -49,7 +49,7 @@ class Expenses:
         if len(form_data['location']) < 2:
             flash("Location must be at least 2 characters long")
             is_valid = False
-        if form_data['amount_spent']== 0:
+        if int(form_data['amount_spent']) <= 0:
             flash("Amount Spent must be greater than $0")
             is_valid = False
         return is_valid

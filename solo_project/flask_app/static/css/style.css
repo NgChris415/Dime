@@ -1,0 +1,81 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+}
+
+.container {
+    display: flex;
+    margin-top: 25px;
+}
+
+.form_options {
+    margin-bottom: 5px;
+}
+
+.title {
+    margin-left: 185px;
+}
+
+.registration_form {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    height: 310px;
+    width: 410px;
+}
+
+.login_form {
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    height: 310px;
+    width: 410px;
+}
+
+.dashboard_header {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.dashboard_right {
+    margin-left: 85px;
+}
+
+.table, th, td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.container_dashboard {
+    display: flex;
+    flex-direction: column;
+}
+
+.add_button {
+    margin-top: 15px;
+}
+
+.sheet_container{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    width: 550px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.sheet_header_top{
+    margin-left: 320px;
+}
+
+.expense_header{
+    display: flex;
+    margin-left: 265px;
+}
+
+.expense_form {
+    border: 2px black solid;
+    padding: 10px;
+    width: 550px;
+}
+
