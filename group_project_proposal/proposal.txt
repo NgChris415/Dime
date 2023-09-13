@@ -1,0 +1,16 @@
+Name: Christopher Ng
+Stack: Python
+Github repo: https://github.com/Hail2DaCode/interestNook
+Project Name: interestNook
+Project Description: A project to create a social media app focused on local community events
+
+MVP:
+    1. login and registration
+    2. dashboard (view events you created and events that others have created, like, comment, RSVP)
+    3. view event (where you can see details of an event and add comments, RSVP)
+    4. view comments (where you can view comments and delete if you are the poster)
+    5. edit events, comments
+    6. database to store information
+
+Bonus:
+    1. External API, to connect to other social media sites in order to post, etc
