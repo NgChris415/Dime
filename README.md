@@ -1,7 +1,6 @@
 # Production README
 
-Welcome to Dime, a dynamic budget tracking application enabling users to effectively manage finances and achieve savings goals Please check it out [here](insert website here)!
-# Table of Contents
+Welcome to Dime, a dynamic budget tracking application enabling users to effectively manage finances and achieve savings goals!
 1. [Technologies](#technologies)
 2. [Features](#features)
 3. [Technical Implementations](#technical-implementations)
