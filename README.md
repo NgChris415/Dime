@@ -29,7 +29,7 @@ Welcome to Dime, a dynamic budget tracking application enabling users to effecti
 
 Users have the capability to establish accounts using the ```Bcrypt``` framework to securely hash their passwords. The website does not store passwords in their original form; instead, it retains password digests and employs built-in Bcrypt methods to validate user credentials. These hashed passwords and emails are stored within a MySQL database, facilitating user login following the account creation process.
 
-<img width="600px" height="400px" alt="dimeloginpage" src="https://github.com/NgChris415/Dime/assets/132420552/28fda545-21e1-448a-95f0-8f5aff215f14">
+<img width="600px" alt="dimeloginpage" src="https://github.com/NgChris415/Dime/assets/132420552/28fda545-21e1-448a-95f0-8f5aff215f14">
 
 ### Dashboard
 The Dashboard displays all the current sheets created, once a sheet is created you are able to add expense, edit, and delete sheet as needed
